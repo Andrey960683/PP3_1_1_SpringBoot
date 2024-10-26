@@ -37,7 +37,8 @@ public class UserServiceImp implements UserService {
 
     @Override
     @Transactional
-    public void editUser(User userUpdate) {
+    public void editUser(int id, User userUpdate) {
+        userUpdate.setId(id);
         userRepository.save(userUpdate);
     }
 
